@@ -1,19 +1,21 @@
 pipeline {
-	agent {label 'label11'}
-	stages {
-		stage('build'){
-			steps{
-				echo "building----"
-			}
-		}
-		stage('test'){
-			steps{
-				echo "testing"
-			}
-		}
-		stage('deploy'){
-			steps{
-				echo "deploying"
-			}
-		}
-	}
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
